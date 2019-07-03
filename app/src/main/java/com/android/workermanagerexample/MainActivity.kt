@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         val uploadWorkRequest = OneTimeWorkRequestBuilder<UploadWorker>()
             .build()
 
+
         WorkManager.getInstance().enqueue(uploadWorkRequest)
 
         WorkManager.getInstance().getWorkInfoByIdLiveData(uploadWorkRequest.id)
